@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -35,7 +36,7 @@ import java.util.ArrayList;
 public class Engr_list_Fragment extends Fragment {
 
     View view;
-    Button back;
+    ImageView back;
     RecyclerView recyclerView;
     ArrayList<users> usersArrayList;
     MyAdapter myAdapter;
@@ -57,7 +58,7 @@ public class Engr_list_Fragment extends Fragment {
         progressDialog.show();
 
 
-        back = (Button) view.findViewById(R.id.back);
+        back = (ImageView) view.findViewById(R.id.back);
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
