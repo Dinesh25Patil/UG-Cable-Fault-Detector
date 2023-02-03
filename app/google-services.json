@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "950450732680",
+    "project_id": "ug-cable-fault-detection",
+    "storage_bucket": "ug-cable-fault-detection.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950450732680:android:208aebadc8699515d1a93d",
+        "android_client_info": {
+          "package_name": "com.example.ugcablefaultdetection"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "950450732680-udnq1qc8ul0ldo68c2jitd1vdgqmfvh6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsUPLMn-TcLuz9gEGzzqzLRnzUtZ39xeA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "950450732680-udnq1qc8ul0ldo68c2jitd1vdgqmfvh6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

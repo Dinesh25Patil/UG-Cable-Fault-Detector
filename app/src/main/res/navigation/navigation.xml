@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/splashScreenFragment">
+
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.example.ugcablefaultdetection.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_register_Fragment"
+            app:destination="@id/register_Fragment"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashScreenFragment_to_navgraph2"
+            app:destination="@id/navgraph2"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashScreenFragment_to_dataDisplayFragment"
+            app:destination="@id/dataDisplayFragment"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashScreenFragment_to_select_ACL"
+            app:destination="@id/select_ACL"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashScreenFragment_to_admin_Page"
+            app:destination="@id/admin_Page"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/register_Fragment"
+        android:name="com.example.ugcablefaultdetection.Register_Fragment"
+        android:label="fragment_register_"
+        tools:layout="@layout/fragment_register_" >
+        <action
+            android:id="@+id/action_register_Fragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/register_Fragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.ugcablefaultdetection.LoginFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_dataDisplayFragment"
+            app:destination="@id/dataDisplayFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_forget_pass_Fragment"
+            app:destination="@id/forget_pass_Fragment"
+            app:popUpTo="@id/forget_pass_Fragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_admin_Page"
+            app:destination="@id/admin_Page"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_register_Fragment"
+            app:destination="@id/register_Fragment" />
+    </fragment>
+    <include app:graph="@navigation/navgraph2" />
+    <fragment
+        android:id="@+id/dataDisplayFragment"
+        android:name="com.example.ugcablefaultdetection.DataDisplayFragment"
+        android:label="fragment_data_display"
+        tools:layout="@layout/fragment_data_display" >
+        <action
+            android:id="@+id/action_dataDisplayFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/dataDisplayFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_dataDisplayFragment_to_select_ACL"
+            app:destination="@id/select_ACL"
+            app:popUpTo="@id/dataDisplayFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_dataDisplayFragment_to_admin_Page"
+            app:destination="@id/admin_Page"
+            app:popUpTo="@id/dataDisplayFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/forget_pass_Fragment"
+        android:name="com.example.ugcablefaultdetection.Forget_pass_Fragment"
+        android:label="fragment_forget_pass_"
+        tools:layout="@layout/fragment_forget_pass_" >
+        <action
+            android:id="@+id/action_forget_pass_Fragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/forget_pass_Fragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/engr_list_Fragment"
+        android:name="com.example.ugcablefaultdetection.Engr_list_Fragment"
+        android:label="fragment_engr_list_"
+        tools:layout="@layout/fragment_engr_list_" >
+        <action
+            android:id="@+id/action_engr_list_Fragment_to_dataDisplayFragment"
+            app:destination="@id/dataDisplayFragment"
+            app:popUpTo="@id/engr_list_Fragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_engr_list_Fragment_to_admin_Page"
+            app:destination="@id/admin_Page"
+            app:popUpTo="@id/engr_list_Fragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/select_ACL"
+        android:name="com.example.ugcablefaultdetection.select_ACL"
+        android:label="fragment_select__a_c_l"
+        tools:layout="@layout/fragment_select__a_c_l" >
+        <action
+            android:id="@+id/action_select_ACL_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/admin_Page"
+        android:name="com.example.ugcablefaultdetection.Admin_Page"
+        android:label="fragment_admin__page"
+        tools:layout="@layout/fragment_admin__page" >
+        <action
+            android:id="@+id/action_admin_Page_to_register_Fragment"
+            app:destination="@id/register_Fragment"
+            app:popUpTo="@id/register_Fragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_admin_Page_to_select_ACL"
+            app:destination="@id/select_ACL"
+            app:popUpTo="@id/admin_Page"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_admin_Page_to_engr_list_Fragment"
+            app:destination="@id/engr_list_Fragment"
+            app:popUpTo="@id/admin_Page"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_admin_Page_to_dataDisplayFragment"
+            app:destination="@id/dataDisplayFragment"
+            app:popUpTo="@id/admin_Page"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>

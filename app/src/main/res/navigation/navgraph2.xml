@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph2"
+    app:startDestination="@id/dataDisplayFragment">
+    <fragment
+        android:id="@+id/dataDisplayFragment"
+        android:name="com.example.ugcablefaultdetection.DataDisplayFragment"
+        android:label="fragment_data_display"
+        tools:layout="@layout/fragment_data_display" >
+        <action
+            android:id="@+id/action_dataDisplayFragment_to_loginFragment2"
+            app:destination="@id/loginFragment2"
+            app:popUpTo="@id/dataDisplayFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment2"
+        android:name="com.example.ugcablefaultdetection.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment2_to_dataDisplayFragment"
+            app:destination="@id/dataDisplayFragment"
+            app:popUpTo="@id/loginFragment2"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
