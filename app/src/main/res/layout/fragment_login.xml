@@ -59,7 +59,7 @@
         android:fontFamily="@font/regfont"
         android:text="Login into your account"
         android:textColor="@color/white"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"

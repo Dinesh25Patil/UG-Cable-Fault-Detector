@@ -106,8 +106,10 @@ public class SplashScreenFragment extends Fragment {
                     if (documentSnapshot.getString("isAdmin") != null){
                         Navigation.findNavController(view).navigate(R.id.action_splashScreenFragment_to_admin_Page);
                         //Toast.makeText(getActivity(), documentSnapshot.getString("isAdmin"), Toast.LENGTH_SHORT).show();
+                    }if (documentSnapshot.getString("isUser") != null){
+                        Navigation.findNavController(view).navigate(R.id.action_splashScreenFragment_to_dataDisplayFragment);
                     }
-                    //Navigation.findNavController(view).navigate(R.id.action_splashScreenFragment_to_admin_Page);
+                    //
                 }
             }
         }).addOnFailureListener(new OnFailureListener() {
