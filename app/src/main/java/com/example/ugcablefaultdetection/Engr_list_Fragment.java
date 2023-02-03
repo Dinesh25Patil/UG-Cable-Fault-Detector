@@ -74,7 +74,7 @@ public class Engr_list_Fragment extends Fragment {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_engr_list_Fragment_to_dataDisplayFragment);
+                Navigation.findNavController(view).navigate(R.id.action_engr_list_Fragment_to_admin_Page);
             }
         });
 
