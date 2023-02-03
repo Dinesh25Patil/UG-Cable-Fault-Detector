@@ -1,6 +1,7 @@
 package com.example.ugcablefaultdetection;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -63,7 +64,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.myViewHolder> {
         @Override
         public void onClick(View view) {
            // Navigation.findNavController(view).navigate(R.id.);
-            Toast.makeText(itemView.getContext(), "Clicked", Toast.LENGTH_SHORT).show();
+
         }
     }
 }
