@@ -51,7 +51,7 @@ public class DataDisplayFragment extends Fragment {
         name = (TextView) view.findViewById(R.id.name);
         email = (TextView) view.findViewById(R.id.email);
         phone = (TextView) view.findViewById(R.id.phone);
-        back = (TextView) view.findViewById(R.id.available);
+        //back = (TextView) view.findViewById(R.id.available);
         fAuth = FirebaseAuth.getInstance();
         fUser = fAuth.getCurrentUser();
         fstore = FirebaseFirestore.getInstance();
@@ -98,12 +98,12 @@ public class DataDisplayFragment extends Fragment {
             }
         });
 
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_dataDisplayFragment_to_admin_Page);
-            }
-        });
+//        back.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Navigation.findNavController(view).navigate(R.id.action_dataDisplayFragment_to_admin_Page);
+//            }
+//        });
 
         return view;
     }
