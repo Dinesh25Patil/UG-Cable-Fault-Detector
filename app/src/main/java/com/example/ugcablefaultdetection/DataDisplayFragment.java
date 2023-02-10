@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
@@ -47,14 +48,16 @@ public class DataDisplayFragment extends Fragment {
         view =  inflater.inflate(R.layout.fragment_data_display, container, false);
 
 
-        lgout = (Button) view.findViewById(R.id.logout);
-        name = (TextView) view.findViewById(R.id.name);
-        email = (TextView) view.findViewById(R.id.email);
-        phone = (TextView) view.findViewById(R.id.phone);
+        lgout = view.findViewById(R.id.logout);
+        name =  view.findViewById(R.id.name);
+        email = view.findViewById(R.id.email);
+        phone =  view.findViewById(R.id.phone);
         //back = (TextView) view.findViewById(R.id.available);
         fAuth = FirebaseAuth.getInstance();
         fUser = fAuth.getCurrentUser();
         fstore = FirebaseFirestore.getInstance();
+
+        ((AppCompatActivity)getActivity()).getSupportActionBar().show();
 
 
         //Reading the data from the firestore database and displaying it into the respective fields
