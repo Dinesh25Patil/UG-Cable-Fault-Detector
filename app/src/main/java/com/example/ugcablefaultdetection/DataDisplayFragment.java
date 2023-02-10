@@ -57,7 +57,7 @@ public class DataDisplayFragment extends Fragment {
         fUser = fAuth.getCurrentUser();
         fstore = FirebaseFirestore.getInstance();
 
-        ((AppCompatActivity)getActivity()).getSupportActionBar().show();
+//        ((AppCompatActivity)getActivity()).getSupportActionBar().show();
 
 
         //Reading the data from the firestore database and displaying it into the respective fields
