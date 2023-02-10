@@ -63,7 +63,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.myViewHolder> {
 
         @Override
         public void onClick(View view) {
-           // Navigation.findNavController(view).navigate(R.id.);
+           Navigation.findNavController(view).navigate(R.id.action_engr_list_Fragment_to_engr_detail_Fragment);
 
         }
     }
