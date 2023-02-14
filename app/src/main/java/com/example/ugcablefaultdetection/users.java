@@ -1,5 +1,8 @@
 package com.example.ugcablefaultdetection;
 
+import androidx.core.app.NavUtils;
+import androidx.navigation.Navigation;
+
 public class users {
 
     String fname;

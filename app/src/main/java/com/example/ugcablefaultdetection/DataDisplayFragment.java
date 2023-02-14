@@ -1,6 +1,7 @@
 package com.example.ugcablefaultdetection;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -35,8 +36,8 @@ import java.util.concurrent.Executor;
 public class DataDisplayFragment extends Fragment {
 
     View view;
-    Button lgout;
-    TextView name, email, phone, back;
+    //Button lgout;
+    //TextView name, email, phone, back;
     FirebaseAuth fAuth;
     FirebaseUser fUser;
     FirebaseFirestore fstore;
@@ -48,10 +49,10 @@ public class DataDisplayFragment extends Fragment {
         view =  inflater.inflate(R.layout.fragment_data_display, container, false);
 
 
-        lgout = view.findViewById(R.id.logout);
-        name =  view.findViewById(R.id.name);
-        email = view.findViewById(R.id.email);
-        phone =  view.findViewById(R.id.phone);
+        //lgout = view.findViewById(R.id.logout);
+        //name =  view.findViewById(R.id.name);
+        //email = view.findViewById(R.id.email);
+        //phone =  view.findViewById(R.id.phone);
         //back = (TextView) view.findViewById(R.id.available);
         fAuth = FirebaseAuth.getInstance();
         fUser = fAuth.getCurrentUser();
@@ -70,9 +71,10 @@ public class DataDisplayFragment extends Fragment {
                         if (task.isSuccessful()){
                             DocumentSnapshot document = task.getResult();
                             if (document.exists()){
-                                name.setText(document.getString("fname"));
-                                email.setText(document.getString("email"));
-                                phone.setText(document.getString("phone"));
+                               // name.setText(document.getString("fname"));
+                               // email.setText(document.getString("email"));
+                               // phone.setText(document.getString("phone"));
+                                Toast.makeText(getActivity(), document.getString("email"), Toast.LENGTH_SHORT).show();
                             }else{
                                 Log.d("dbError", "No such document");
                             }
@@ -91,15 +93,15 @@ public class DataDisplayFragment extends Fragment {
 //        });
 
 
-        lgout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                fAuth.getInstance().signOut();
-                //Navigation.findNavController(view).navigate(R.id.action_dataDisplayFragment_to_loginFragment);
-                Navigation.findNavController(view).navigate(R.id.action_dataDisplayFragment_to_select_ACL);
-                //Navigation.findNavController(view).navigate(R.id.action_dataDisplayFragment2_to_loginFragment);
-            }
-        });
+//        lgout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                fAuth.getInstance().signOut();
+//                //Navigation.findNavController(view).navigate(R.id.action_dataDisplayFragment_to_loginFragment);
+//                Navigation.findNavController(view).navigate(R.id.action_dataDisplayFragment_to_select_ACL);
+//                //Navigation.findNavController(view).navigate(R.id.action_dataDisplayFragment2_to_loginFragment);
+//            }
+//        });
 
 //        back.setOnClickListener(new View.OnClickListener() {
 //            @Override
