@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,8 +37,10 @@ import java.util.concurrent.Executor;
 public class DataDisplayFragment extends Fragment {
 
     View view;
-    //Button lgout;
+    Button btn;
     //TextView name, email, phone, back;
+    ImageView red_phase;
+    int flag = 0;
     FirebaseAuth fAuth;
     FirebaseUser fUser;
     FirebaseFirestore fstore;
@@ -49,7 +52,7 @@ public class DataDisplayFragment extends Fragment {
         view =  inflater.inflate(R.layout.fragment_data_display, container, false);
 
 
-        //lgout = view.findViewById(R.id.logout);
+        btn = view.findViewById(R.id.btn);
         //name =  view.findViewById(R.id.name);
         //email = view.findViewById(R.id.email);
         //phone =  view.findViewById(R.id.phone);
@@ -57,7 +60,30 @@ public class DataDisplayFragment extends Fragment {
         fAuth = FirebaseAuth.getInstance();
         fUser = fAuth.getCurrentUser();
         fstore = FirebaseFirestore.getInstance();
+        red_phase = view.findViewById(R.id.red_phase);
 
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if(flag==0){
+                    red_phase.setImageResource(R.drawable.ic_phase_r);
+                    flag = 1;
+                }else if(flag==1){
+                    red_phase.setImageResource(R.drawable.ic_red_2km);
+                    flag = 2;
+                }else if(flag==2){
+                    red_phase.setImageResource(R.drawable.ic_red_4km);
+                    flag = 3;
+                }else if(flag==3){
+                    red_phase.setImageResource(R.drawable.ic_red_6km);
+                    flag = 4;
+                }else if(flag==4){
+                    red_phase.setImageResource(R.drawable.ic_red_8km);
+                    flag=0;
+                }
+            }
+        });
 //        ((AppCompatActivity)getActivity()).getSupportActionBar().show();
 
 

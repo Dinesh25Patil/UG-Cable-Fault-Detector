@@ -8,6 +8,7 @@
     tools:context=".DataDisplayFragment">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
         android:layout_width="0dp"
         android:layout_height="400dp"
         android:layout_marginStart="10dp"
@@ -48,6 +49,7 @@
                     android:textStyle="bold" />
 
                 <ImageView
+                    android:id="@+id/red_phase"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:src="@drawable/ic_red_2km" />
@@ -63,8 +65,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="55dp"
-                    android:fontFamily="@font/regfont"
                     android:layout_marginTop="25dp"
+                    android:fontFamily="@font/regfont"
                     android:text="Y Phase"
                     android:textColor="@color/black"
                     android:textSize="20sp"
@@ -74,7 +76,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="50dp"
-                    android:src="@drawable/ic_yellow_2km" />
+                    android:src="@drawable/ic_yellow_4km" />
 
             </LinearLayout>
 
@@ -87,9 +89,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="50dp"
+                    android:layout_marginTop="25dp"
                     android:fontFamily="@font/regfont"
                     android:text="B Phase"
-                    android:layout_marginTop="25dp"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -98,12 +100,23 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="50dp"
-                    android:src="@drawable/ic_blue_2km" />
+                    android:src="@drawable/ic_blue_8km" />
 
             </LinearLayout>
 
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
